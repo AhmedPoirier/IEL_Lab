@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#define MAX_TREE_HT 50
+
+
+void printHCodes(struct array *side ; *side, int arr[], int top) {
+  if (side->left) {
+    arr[top] = 0;
+    printHCodes(side->left, arr, top + 1);
+  }
+  if (side->right) {
+    arr[top] = 1;
+    printHCodes(root->right, arr, top + 1);
+  }
+  if (isLeaf(side)) {
+    printf("  %c   | ", side->item);
+    printArray(arr, top);
+  }
+}
